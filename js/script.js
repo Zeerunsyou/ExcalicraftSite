@@ -74,9 +74,9 @@ const config = {
                 rankColor: ""
             }
         ],
-                builders: [
+        builders: [
             {
-                inGameName: "Magiik21",
+                inGameName: "Lync_Fear",
                 rank: "Builder",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
