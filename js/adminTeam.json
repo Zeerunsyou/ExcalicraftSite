@@ -1,0 +1,114 @@
+{
+    "leaders": [
+        {
+            "inGameName": "Magiik21",
+            "rank": "Owner",
+            "skinUrlOrPathToFile": "",
+            "rankColor": "rgba(255, 3, 3, 1)"
+        },
+        {
+            "inGameName": "ForlornPro",
+            "rank": "Manager",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        }
+    ],
+    "developers": [
+        {
+            "inGameName": "Magiik21",
+            "rank": "Developer",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "ForlornPro",
+            "rank": "Webmaster",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "ForlornPro",
+            "rank": "Discord manager",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        }
+    ],
+    "builders": [
+        {
+            "inGameName": "Lync_Fear",
+            "rank": "Builder",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Builder",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Builder",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        }
+    ],
+    "admins": [
+        {
+            "inGameName": "Magiik21",
+            "rank": "Admin",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Mod+",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Mod",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Mod",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        }
+    ],
+    "helpers": [
+        {
+            "inGameName": "Magiik21",
+            "rank": "Helper+",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Helper+",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Helper",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Helper",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        },
+        {
+            "inGameName": "Magiik21",
+            "rank": "Helper",
+            "skinUrlOrPathToFile": "",
+            "rankColor": ""
+        }
+    ]
+}
