@@ -1,12 +1,15 @@
 const config = {
     serverInfo: {
-        serverLogoImageFileName: "logo.png",
-        serverName: "",
-        serverIp: "excalicraft.mc.gg",
-        discordServerID: "1348421050362363975"
+        serverLogoImageFileName: "logo.png", // File name for logo in /images/
+        serverName: "", // Server name
+        serverIp: "excalicraft.mc.gg", // Server IP
+        discordServerID: "1348421050362363975" // Discord Server ID
     },
 
-    userSKinTypeInAdminTeam: "bust",
+    // Admin Team Configuration
+    userSKinTypeInAdminTeam: "bust", // Skin type [full, bust, head, face, front, frontFull, skin]
+    
+    // Default rank colors
     atGroupsDefaultColors: {
         leaders: "rgba(85, 85, 255, 0.5)",
         developers: "rgba(230, 83, 0, 0.5)",
@@ -15,12 +18,13 @@ const config = {
         builders: "rgba(247, 2, 176, 0.5)"
     },
 
+    // Contact form settings
     contactPage: {
         email: "forlornpro@example.com"
     }
 };
 
-// Load admin team data dynamically
+// Load admin team data dynamically from adminTeam.json
 fetch("adminTeam.json")
     .then(response => response.json())
     .then(data => {
@@ -29,10 +33,12 @@ fetch("adminTeam.json")
     })
     .catch(error => console.error("Error loading admin team data:", error));
 
-/*If you want everything to work as it should and you don't understand what is written here, don't touch it :D*/
+/* 
+If you want everything to work correctly and don't fully understand what is written here, 
+don't modify the structure! 😀
+*/
 
-
-/*Mobile navbar (open, close)*/
+/* Mobile navbar (open, close) */
 const navbar = document.querySelector(".navbar");
 const navbarLinks = document.querySelector(".links");
 const hamburger = document.querySelector(".hamburger");
@@ -40,9 +46,9 @@ const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", () => {
     navbar.classList.toggle("active");
     navbarLinks.classList.toggle("active");
-})
+});
 
-/*FAQs*/
+/* FAQs - Accordion functionality */
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 accordionItemHeaders.forEach(accordionItemHeader => {
@@ -50,10 +56,14 @@ accordionItemHeaders.forEach(accordionItemHeader => {
         accordionItemHeader.classList.toggle("active");
         const accordionItemBody = accordionItemHeader.nextElementSibling;
 
-        if(accordionItemHeader.classList.contains("active")) accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        else accordionItemBody.style.maxHeight = "0px";
+        if (accordionItemHeader.classList.contains("active")) {
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        } else {
+            accordionItemBody.style.maxHeight = 0;
+        }
     });
 });
+
 
 /*Config navbar*/
 const serverName = document.querySelector(".server-name");
