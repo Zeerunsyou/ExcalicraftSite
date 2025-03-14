@@ -99,10 +99,6 @@ body {
   right: 20px;
 }
 
-.navbar .links .link.active {
-  color: var(--white-color);
-}
-
 .navbar .links .link.active::after {
   content: "";
   position: absolute;
