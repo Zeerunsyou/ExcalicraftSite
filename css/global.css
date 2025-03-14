@@ -135,6 +135,11 @@ body {
   z-index: 2;
 }
 
+
+.navbar .links .link.active {
+  color: var(--white-color);
+}
+
 /*Footer*/
 #footer {
   padding: 20px 150px;
