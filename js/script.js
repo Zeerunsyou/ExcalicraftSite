@@ -1,51 +1,187 @@
 const config = {
     serverInfo: {
-        serverLogoImageFileName: "logo.png", // File name for logo in /images/
-        serverName: "", // Server name
-        serverIp: "excalicraft.mc.gg", // Server IP
-        discordServerID: "1348421050362363975" // Discord Server ID
+        serverLogoImageFileName: "logo.png", /*This is a file name for logo in /images/ (If you upload new logo with other name, you must change this value)*/
+        serverName: "", /*Server name*/
+        serverIp: "excalicraft.mc.gg", /*Server IP (if you want to add online user counter, you must have true the enable-status and enable-query of server.properties)*/
+        discordServerID: "1348421050362363975" /*Your server ID (if you want to add online user counter, you must have enabled Discord server widget)*/
     },
 
-    // Admin Team Configuration
-    userSKinTypeInAdminTeam: "bust", // Skin type [full, bust, head, face, front, frontFull, skin]
-    
-    // Default rank colors
+    /*Admin-Team
+    ------------
+    If you want to create new group, you must add this structure to adminTeamPage:
+    <nameOfGroup>: [
+        {
+            inGameName: "Magiik21",
+            rank: "Owner",
+            skinUrlOrPathToFile: "",
+            rankColor: ""
+        },
+    ]
+    then you must add this group with same name to atGroupsDefaultColors and set the color you want for the group.
+    You can also set a special color for a specific user, just put it in the rankColor of that user.
+
+    All skins for original players are generate automaticaly. If you want to add skins to warez players, yout must add url for skin to skinUrlOrPathToFile
+        {
+            inGameName: "Magiik21",  <--- In-Game name
+            rank: "Owner",  <-- rank
+            skinUrlOrPathToFile: "",  <-- url or file path for skin image for warez players (if you have original minecraft leave it be empty)
+            rankColor: "rgba(255, 3, 3, 1)"  <-- special rank color
+        },
+
+    If you want to change skin type replace userSKinTypeInAdminTeam with something you want from array in comments
+    */
+    userSKinTypeInAdminTeam: "bust", /*[full, bust, head, face, front, frontFull, skin]*/
     atGroupsDefaultColors: {
-        leaders: "rgba(85, 85, 255, 0.5)",
+        leaders: "rgba(255, 124, 124, 0.5)",
         developers: "rgba(230, 83, 0, 0.5)",
-        admins: "rgba(255, 0, 0, 0.5)",
         helpers: "rgba(11, 175, 255, 0.5)",
-        builders: "rgba(247, 2, 176, 0.5)"
+        builders: "rgba(247, 2, 176, 0.5)",
+    },
+    adminTeamPage: {
+        leaders: [
+            {
+                inGameName: "Magiik21",
+                rank: "Owner",
+                skinUrlOrPathToFile: "",
+                rankColor: "rgba(255, 3, 3, 1)"
+            },
+            {
+                inGameName: "ForlornPro",
+                rank: "Manager",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ],
+        developers: [
+            {
+                inGameName: "Magiik21",
+                rank: "Developer",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "ForlornPro",
+                rank: "Webmaster",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "ForlornPro",
+                rank: "Discord manager",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ],
+        helpers: [
+            {
+                inGameName: "Magiik21",
+                rank: "Helper++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Helper++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Helper+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Helper+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Helper",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Helper",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ],
+        builders: [
+            {
+                inGameName: "Magiik21",
+                rank: "Builder++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Builder++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Builder+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Builder+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Builder",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Builder",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ]
     },
 
-    // Contact form settings
+    /*
+    Contact form
+    ------------
+    To activate, you need to send the first email via the contact form and confirm it in the email.
+    Emails are sent via https://formsubmit.co/
+    */
     contactPage: {
         email: "forlornpro@example.com"
     }
-};
+}
 
-fetch("adminTeam.json")
-    .then(response => {
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        return response.text();
-    })
-    .then(text => {
-        console.log("Raw response:", text); // Log raw text to check if it's JSON
-        return JSON.parse(text);
-    })
-    .then(data => {
-        config.adminTeamPage = data;
-        console.log("Admin team data loaded:", config.adminTeamPage);
-    })
-    .catch(error => console.error("Error loading admin team data:", error));
+/*If you want to change website color go to /css/global.css and in :root {} is a color pallete (don't change names of variables, change only values)*/
 
 
-/* 
-If you want everything to work correctly and don't fully understand what is written here, 
-don't modify the structure! 😀
-*/
 
-/* Mobile navbar (open, close) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*If you want everything to work as it should and you don't understand what is written here, don't touch it :D*/
+
+
+/*Mobile navbar (open, close)*/
 const navbar = document.querySelector(".navbar");
 const navbarLinks = document.querySelector(".links");
 const hamburger = document.querySelector(".hamburger");
@@ -53,9 +189,9 @@ const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", () => {
     navbar.classList.toggle("active");
     navbarLinks.classList.toggle("active");
-});
+})
 
-/* FAQs - Accordion functionality */
+/*FAQs*/
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
 
 accordionItemHeaders.forEach(accordionItemHeader => {
@@ -63,14 +199,10 @@ accordionItemHeaders.forEach(accordionItemHeader => {
         accordionItemHeader.classList.toggle("active");
         const accordionItemBody = accordionItemHeader.nextElementSibling;
 
-        if (accordionItemHeader.classList.contains("active")) {
-            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
-        } else {
-            accordionItemBody.style.maxHeight = 0;
-        }
+        if(accordionItemHeader.classList.contains("active")) accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        else accordionItemBody.style.maxHeight = "0px";
     });
 });
-
 
 /*Config navbar*/
 const serverName = document.querySelector(".server-name");
