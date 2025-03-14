@@ -32,8 +32,10 @@ const config = {
     */
     userSKinTypeInAdminTeam: "bust", /*[full, bust, head, face, front, frontFull, skin]*/
     atGroupsDefaultColors: {
-        leaders: "rgba(255, 124, 124, 0.5)",
+        leaders: "rgba(85, 85, 255, 0.5)",
+        admins: "rgba(255, 0, 0, 0.5)",
         developers: "rgba(230, 83, 0, 0.5)",
+        mods: "rgba(45, 141, 80, 0.5)",
         helpers: "rgba(11, 175, 255, 0.5)",
         builders: "rgba(247, 2, 176, 0.5)",
     },
