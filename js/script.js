@@ -34,6 +34,7 @@ const config = {
     atGroupsDefaultColors: {
         leaders: "rgba(255, 124, 124, 0.5)",
         developers: "rgba(230, 83, 0, 0.5)",
+        admins: "rgba(255, 0, 0, 0.5)",
         helpers: "rgba(11, 175, 255, 0.5)",
         builders: "rgba(247, 2, 176, 0.5)",
     },
@@ -72,81 +73,78 @@ const config = {
                 rankColor: ""
             }
         ],
-        helpers: [
+        builders: [
             {
-                inGameName: "Magiik21",
-                rank: "Helper++",
+                inGameName: "Lync_Fear",
+                rank: "Builder",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Helper++",
+                rank: "Builder",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Helper+",
+                rank: "Builder",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+        ],
+        admins: [
+            {
+                inGameName: "Magiik21",
+                rank: "Admin",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Helper+",
+                rank: "Mod+",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Helper",
-                skinUrlOrPathToFile: "",
-                rankColor: ""
-            },
-            {
-                inGameName: "Magiik21",
-                rank: "Helper",
+                rank: "Mod",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             }
         ],
-        builders: [
+            
+        helpers: [
             {
                 inGameName: "Magiik21",
-                rank: "Builder++",
+                rank: "Helper+",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Builder++",
+                rank: "Helper+",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Builder+",
+                rank: "Helper",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Builder+",
+                rank: "Helper",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
             {
                 inGameName: "Magiik21",
-                rank: "Builder",
+                rank: "Helper",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
             },
-            {
-                inGameName: "Magiik21",
-                rank: "Builder",
-                skinUrlOrPathToFile: "",
-                rankColor: ""
-            }
         ]
     },
 
