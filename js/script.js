@@ -111,6 +111,12 @@ const config = {
                 rank: "Mod",
                 skinUrlOrPathToFile: "",
                 rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Mod",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
             }
         ],
             
