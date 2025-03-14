@@ -24,14 +24,21 @@ const config = {
     }
 };
 
-// Load admin team data dynamically from adminTeam.json
 fetch("adminTeam.json")
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        return response.text();
+    })
+    .then(text => {
+        console.log("Raw response:", text); // Log raw text to check if it's JSON
+        return JSON.parse(text);
+    })
     .then(data => {
         config.adminTeamPage = data;
         console.log("Admin team data loaded:", config.adminTeamPage);
     })
     .catch(error => console.error("Error loading admin team data:", error));
+
 
 /* 
 If you want everything to work correctly and don't fully understand what is written here, 
