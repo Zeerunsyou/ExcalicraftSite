@@ -92,6 +92,26 @@ const config = {
                 rankColor: ""
             }
         ],
+        admins: [
+            {
+                inGameName: "Magiik21",
+                rank: "Admin",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Admin",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "Magiik21",
+                rank: "Admin",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ],
         mods: [
             {
                 inGameName: "Magiik21",
